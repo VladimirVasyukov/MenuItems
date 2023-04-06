@@ -1,0 +1,27 @@
+<div class="card">
+  <img src="{{menuItem.image}}"
+       alt="{{ menuItem.name }}"
+       class="card__image" />
+  <div class="card__info">
+    <div class="card__name-wrapper">
+      <a class="card__name"
+         [routerLink]="['/info', menuItem.id]">
+        <span>
+          {{ menuItem.name }}
+        </span>
+      </a>
+      <app-favorite [value]="menuItem.favorite"
+                    (onChange)="onFavorite($event)">
+      </app-favorite>
+      <div class="card__actions">
+        <button [routerLink]="['/edit', menuItem.id]"
+                class="card__actions edit">
+        </button>
+        <button class="card__actions delete"
+                (click)="deleteMenuItem.emit(menuItem.id)">
+        </button>
+      </div>
+    </div>
+    <p class="card__description">{{menuItem.description}}</p>
+  </div>
+</div>

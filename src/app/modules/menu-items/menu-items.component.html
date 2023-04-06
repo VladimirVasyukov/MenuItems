@@ -1,0 +1,28 @@
+<header class="header">
+  <div class="content header-content">
+    <h1>{{title['title']}}</h1>
+  </div>
+</header>
+
+<main class="content menuItems-wrapper">
+  <div class="btn-wrapper">
+    <div>
+      <button class="btn-primary"
+              routerLink="/list">
+        Список
+      </button>
+      <button class="btn-primary"
+              routerLink="/tile">
+        Плитка
+      </button>
+    </div>
+    <button *ngIf="title['title'] === 'Меню'"
+            class="btn-create"
+            routerLink="/create">
+      Создать
+    </button>
+  </div>
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="footer"></footer>

@@ -1,0 +1,70 @@
+.card {
+  display: flex;
+  gap: 28px;
+  max-width: 1330px;
+  border-top: 1px solid #d3d4db;
+}
+
+.card__image {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  margin: 19.5px 0;
+}
+
+.card__info {
+  padding-top: 50px;
+}
+
+.card__name-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.card__name {
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 14px;
+  line-height: 20px;
+  color: #2d6fb1;
+}
+
+.card__name:hover {
+  color: black;
+}
+
+.card__description {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #435261;
+}
+
+.card__actions {
+  display: flex;
+  margin-left: auto;
+  gap: 46px;
+}
+
+.edit,
+.delete {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: none;
+}
+
+.edit::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: url(../../../../../assets/vector-edit.svg) 0 / 100% no-repeat;
+}
+
+.delete::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: url(../../../../../assets/vector-trash.svg) 0 / 100% no-repeat;
+}

@@ -1,0 +1,82 @@
+.btn-back {
+  display: flex;
+  width: 97px;
+  height: 36px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #434652;
+  background-color: #ffffff;
+  border: 1px solid #c4c7d1;
+}
+
+.btn-back::before {
+  content: "";
+  position: relative;
+  left: -6px;
+  width: 15px;
+  height: 15px;
+  background: url(../../../assets/vector-back.svg) 0 / 100% no-repeat;
+}
+
+input,
+textarea {
+  padding: 5px;
+  line-height: 24px;
+  min-width: 534px;
+  border: 1px solid#D3D4DB;
+
+  &.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+
+  &.ng-valid.ng-touched {
+    border: 1px solid green;
+  }
+}
+
+.validation {
+  color: red;
+}
+
+.input-title {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 5px;
+  font-family: Roboto;
+  font-size: 14px;
+  color: #434652;
+}
+
+.menuItem-name {
+  margin-bottom: 6px;
+}
+
+.menuItem-description {
+  margin-bottom: 2px;
+  height: 80px;
+  resize: vertical;
+}
+
+.btn-create {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 88px;
+  height: 36px;
+  border-radius: 4px;
+  margin-top: 40px;
+  padding: 0px, 20px, 0px, 20px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #ffffff;
+  background: #21a5b9;
+}
+
+.opacity {
+  opacity: 0.5;
+}

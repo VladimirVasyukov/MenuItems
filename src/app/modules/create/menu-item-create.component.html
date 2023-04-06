@@ -1,0 +1,53 @@
+<button type="button"
+        class="btn-back"
+        routerLink="">
+  Назад
+</button>
+
+<form [formGroup]="form"
+      (ngSubmit)="addMenuItem()">
+  <label for="name"
+         class="input-title">Название пункта</label>
+  <input type="text"
+         id="name"
+         class="menuItem-name"
+         formControlName="menuItemName" />
+  <div class="validation"
+       *ngIf="menuItemNameValidation">
+    <small *ngIf="menuItemNameValidationMessage">
+      {{MENU_ITEM_NAME_INPUT_WARN_MESSAGE}}
+    </small>
+  </div>
+
+  <label for="description"
+         class="input-title">Описание пункта</label>
+  <textarea id="description"
+            class="menuItem-description"
+            formControlName="menuItemDescription"></textarea>
+  <div class="validation"
+       *ngIf="menuItemDescriptionValidation">
+    <small *ngIf="menuItemDescriptionValidationMessage">
+      {{MENU_ITEM_DESCRIPTION_INPUT_WARN_MESSAGE}}
+    </small>
+  </div>
+
+  <label for="image"
+         class="input-title">Ссылка на картинку</label>
+  <input type="text"
+         id="image"
+         class="menuItem-image"
+         formControlName="menuItemImage" />
+  <div class="validation"
+       *ngIf="menuItemImageValidation">
+    <small *ngIf="menuItemImageValidationMessage">
+      {{MENU_ITEM_IMAGE_INPUT_WARN_MESSAGE}}
+    </small>
+  </div>
+
+  <button type="submit"
+          class="btn-create"
+          [ngClass]="{opamenuItem: form.invalid}"
+          [disabled]="form.invalid">
+    {{title['title'] === TITLE ? CREATE : SAVE}}
+  </button>
+</form>
